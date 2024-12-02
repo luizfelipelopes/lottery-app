@@ -95,7 +95,7 @@ class CreditController extends Controller
                 if($transaction && $transaction->status === 'pending') {
                     $transaction->status = 'paid';
                     $transaction->save();
-                    $transaction->user->available_credits = $transaction->credits;
+                    $transaction->user->available_credits += $transaction->credits;
                     $transaction->user->save();
                 }
 
