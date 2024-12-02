@@ -98,6 +98,7 @@ class CreditController extends Controller
                     $transaction->user->available_credits += $transaction->credits;
                     $transaction->user->save();
                 }
+
                 break;
             // handle other event types
             default:
