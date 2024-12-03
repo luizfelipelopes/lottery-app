@@ -13,8 +13,7 @@ class HistoricController extends Controller
         $usedFeatures = UsedFeature::query()
         ->with(['feature'])
         ->where('user_id', auth()->user()->id)
-        ->latest()
-        ->paginate();
+        ->get();
 
         return Inertia::render('Historic', [
             'usedFeatures' => UsedFeatureResource::collection($usedFeatures)

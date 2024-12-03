@@ -1,4 +1,3 @@
-import ApplicationLogo from '@/Components/ApplicationLogo';
 import Dropdown from '@/Components/Dropdown';
 import NavLink from '@/Components/NavLink';
 import ResponsiveNavLink from '@/Components/ResponsiveNavLink';
@@ -17,11 +16,6 @@ export default function AuthenticatedLayout({ header, children }) {
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <div className="flex h-16 justify-between">
                         <div className="flex">
-                            <div className="flex shrink-0 items-center">
-                                <Link href="/">
-                                    <ApplicationLogo className="block h-9 w-auto fill-current" />
-                                </Link>
-                            </div>
 
                             <div className="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                                 <NavLink
@@ -39,8 +33,7 @@ export default function AuthenticatedLayout({ header, children }) {
                             </div>
                         </div>
 
-                        <div className="hidden sm:ms-6 sm:flex sm:items-center">
-
+                        <div className='flex flex-wrap flex-center justify-center md:justify-end items-center sm:hidden'>
                             <span className='flex gap-3 mr-3'>
                                 <img 
                                     src='/img/coin.png'
@@ -58,6 +51,29 @@ export default function AuthenticatedLayout({ header, children }) {
                             >
                                 Pegar Créditos
                             </Link>
+                        </div>
+
+                        <div className="hidden sm:ms-6 sm:flex sm:items-center">
+
+                            <div className='flex flex-wrap flex-center justify-center md:justify-end items-center'>
+                                <span className='flex gap-3 mr-3'>
+                                    <img 
+                                        src='/img/coin.png'
+                                        className='w-[20px]'
+                                        alt=''
+                                    />
+                                    {user.available_credits} Créditos
+                                </span>
+
+                                <Link
+                                    href={route('credit.index')}
+                                    className='border rounded px-3 py-1
+                                    hover:bg-gray-500 hover:text-white
+                                    transition-colors'
+                                >
+                                    Pegar Créditos
+                                </Link>
+                            </div>
 
                             <div className="relative ms-3">
                                 <Dropdown>
@@ -87,16 +103,11 @@ export default function AuthenticatedLayout({ header, children }) {
 
                                     <Dropdown.Content>
                                         <Dropdown.Link
-                                            href={route('profile.edit')}
-                                        >
-                                            Profile
-                                        </Dropdown.Link>
-                                        <Dropdown.Link
                                             href={route('logout')}
                                             method="post"
                                             as="button"
                                         >
-                                            Log Out
+                                            Sair
                                         </Dropdown.Link>
                                     </Dropdown.Content>
                                 </Dropdown>
@@ -184,15 +195,12 @@ export default function AuthenticatedLayout({ header, children }) {
                             <ResponsiveNavLink href={route('historic')}>
                                 Resultados
                             </ResponsiveNavLink>
-                            <ResponsiveNavLink href={route('profile.edit')}>
-                                Profile
-                            </ResponsiveNavLink>
                             <ResponsiveNavLink
                                 method="post"
                                 href={route('logout')}
                                 as="button"
                             >
-                                Log Out
+                                Sair
                             </ResponsiveNavLink>
                         </div>
                     </div>
