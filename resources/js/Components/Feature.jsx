@@ -9,14 +9,14 @@ export default function Feature({ feature, answer, children }) {
     return (
          <AuthenticatedLayout
             header={
-                <h2 className="text-xl font-semibold leading-tight">
+                <h2 className="text-xl text-center md:text-left font-semibold leading-tight">
                     {feature.name}
                 </h2>
             }
         >
             <Head title={feature.name} />
 
-            <div className="py-12 px-8">
+            <div className="px-8">
 
                 <div className="overflow-hiden shadown-sm sm:rounded-lg relative">
                     {availableCredits !== null && feature.required_credits > availableCredits && (
@@ -38,7 +38,7 @@ export default function Feature({ feature, answer, children }) {
                     )}
                 
 
-                <div className="p-4 text-gray-400 border-b pb-4 flex flex-wrap sm:flex-nowrap justify-center sm:justify-between items-center dark:bg-gray-700">
+                <div className="mx-auto mx-auto max-w-7xl sm:px-6 lg:px-8 p-4 text-gray-400 border-b pb-4 flex flex-wrap sm:flex-nowrap justify-center sm:justify-between items-center dark:bg-gray-700">
                     <p className="sm:mr-3">{feature.description}</p>
                     <p className="text-sm italic text-right">
                         Requer {feature.required_credits} crédito

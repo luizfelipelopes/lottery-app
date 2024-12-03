@@ -34,7 +34,7 @@ export default function AuthenticatedLayout({ header, children }) {
                         </div>
 
                         <div className='flex flex-wrap flex-center justify-center md:justify-end items-center sm:hidden'>
-                            <span className='flex gap-3 mr-3'>
+                            <span className='flex gap-3 mr-1'>
                                 <img 
                                     src='/img/coin.png'
                                     className='w-[20px]'
@@ -179,16 +179,7 @@ export default function AuthenticatedLayout({ header, children }) {
                     </div>
 
                     <div className="border-t border-gray-200 pb-1 pt-4">
-                        <div className="px-4">
-                            <div className="text-base font-medium">
-                                {user.name}
-                            </div>
-                            <div className="text-sm font-medium">
-                                {user.email}
-                            </div>
-                        </div>
-
-                        <div className="mt-3 space-y-1">
+                        <div className=" space-y-1">
                             <ResponsiveNavLink href={route('feature_random_numbers.index')}>
                                 Números Aleatórios
                             </ResponsiveNavLink>
