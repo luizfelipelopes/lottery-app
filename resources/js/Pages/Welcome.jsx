@@ -62,7 +62,7 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
                         </header>
 
 
-                        <div className='py-20' >
+                        <div className='py-5' >
                             <div className="content-center">
                                 <h2 className="text-center text-xl font-bold">{'Comece Agora a Gerar os Seus Números!'}</h2>
 
