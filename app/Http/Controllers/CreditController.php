@@ -60,12 +60,12 @@ class CreditController extends Controller
 
     public function success()
     {
-        return to_route('credit.index')->with('success', 'Você comprou novos créditos com sucesso!');
+        return to_route('feature_random_numbers.index')->with('success', 'Você comprou novos créditos com sucesso!');
     }
     
     public function cancel()
     {
-        return to_route('credit.index')->with('error', 'Houve um erro no processo de pagamento. Por favor, tente novamente.');
+        return to_route('feature_random_numbers.index')->with('error', 'Houve um erro no processo de pagamento. Por favor, tente novamente.');
     }
 
     public function webhook() 
