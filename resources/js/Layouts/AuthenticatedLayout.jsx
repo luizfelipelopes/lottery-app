@@ -34,7 +34,7 @@ export default function AuthenticatedLayout({ header, children }) {
                         </div>
 
                         <div className='flex flex-wrap flex-center justify-center md:justify-end items-center sm:hidden'>
-                            <span className='flex gap-3 mr-1'>
+                            <span className='flex gap-3 mr-2 sm:mr-3'>
                                 <img 
                                     src='/img/coin.png'
                                     className='w-[20px]'
