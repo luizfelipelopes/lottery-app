@@ -34,15 +34,7 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
                                 </svg>
                             </div>
                             <nav className="-mx-3 flex flex-1 justify-end">
-                                {auth.user ? (
-                                    <Link
-                                        href={route('feature_random_numbers.index')}
-                                        className="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"
-                                    >
-                                        Jogar
-                                    </Link>
-                                    
-                                ) : (
+                                {!auth.user && (
                                     <>
                                         <Link
                                             href={route('login')}
@@ -54,7 +46,7 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
                                             href={route('register')}
                                             className="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"
                                         >
-                                            Registrar
+                                            Cadastrar
                                         </Link>
                                     </>
                                 )}
@@ -64,7 +56,7 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
 
                         <div className='py-5' >
                             <div className="content-center">
-                                <h2 className="text-center text-xl font-bold">{'Comece Agora a Gerar os Seus Números!'}</h2>
+                                <h2 className="text-center text-xl font-bold">{'Comece Agora a Gerar 6 Números Aleatórios!'}</h2>
 
                                 <div className="w-full flex py-4">
                                     <Link
@@ -75,7 +67,7 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
                                         bg-sky-500/75 text-white my-6'
                                         onClick={ () => generateNumbers() }
                                     >
-                                        Gerar Jogo
+                                        Gerar Números
                                     </Link>
                                 </div>
 

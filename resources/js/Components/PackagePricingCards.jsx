@@ -9,7 +9,10 @@ export function PackagePricingCards({ packages }) {
             <div className="py-8 px-4">
                 <div className="text-center mb-8">
                     <h2 className="mb-4 text-4x1 font-extrabold">
-                        Quanto mais créditos você escolher mais jogos você vai fazer.
+                        1 Credito Equivale a 1 Jogo de 6 Números.
+                    </h2>
+                    <h2 className="mb-4 text-4x1 font-extrabold">
+                        Quanto mais créditos você escolher, mais números aleatórios serão gerados.
                     </h2>
                 </div>
             </div>
@@ -48,7 +51,7 @@ export function PackagePricingCards({ packages }) {
                                 >
                                 </input>
                                 <button className="text-white bg-indigo-600 hover:bg-indigo-800 focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:text-white  dark:focus:ring-primary-900">
-                                    Adicionar
+                                    Comprar Créditos
                                 </button>
 
                         </form>

@@ -27,7 +27,7 @@ export default function Index({ feature, answer }) {
                         bg-sky-500/75 text-white mb-3'
                         onClick={ () => generateNumbers() }
                     >
-                        Gerar Jogo
+                        Gerar Números
                     </button>
                 </div>
 

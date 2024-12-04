@@ -49,7 +49,7 @@ export default function AuthenticatedLayout({ header, children }) {
                                 hover:bg-gray-500 hover:text-white
                                 transition-colors'
                             >
-                                Pegar Créditos
+                                Comprar Créditos
                             </Link>
                         </div>
 
@@ -71,7 +71,7 @@ export default function AuthenticatedLayout({ header, children }) {
                                     hover:bg-gray-500 hover:text-white
                                     transition-colors'
                                 >
-                                    Pegar Créditos
+                                    Comprar Créditos
                                 </Link>
                             </div>
 
