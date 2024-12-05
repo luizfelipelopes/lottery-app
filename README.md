@@ -15,7 +15,11 @@
 Gerador de Números is a project SAAS that provide a unique random number generator. This solution not only automates the process but also allows users to manage credits intuitively, with customizable recharges of 10, 40, or 100 credits.
 
 ## Preview
+<div align="center">
+
 ![Gerador de Números](public/preview.gif)
+
+</div>
 
 ## Links
 Gerador de Números is available in: https://geradornumeros.com/
