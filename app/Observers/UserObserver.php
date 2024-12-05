@@ -8,6 +8,6 @@ class UserObserver
 {
     public function creating(User $user): void
     {
-        $user->available_credits = 7;
+        $user->available_credits = 10;
     }
 }
